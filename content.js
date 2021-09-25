@@ -27,7 +27,8 @@ function updateChromeStorage(key, obj) {
         }else{
             console.log('It already exists, updating the scroll position...')
             obj.scrollP = document.getElementsByTagName("html")[0].scrollTop
-            myObjArray.push(obj)
+            pos = myObjArray.map(function(e) { return e.link; }).indexOf(obj.link)
+            myObjArray[pos] = obj
             chrome.storage.sync.set({key: myObjArray}, function() {
                 console.log(`Scroll position updated: ${obj.scrollP}`)
             });
