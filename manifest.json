@@ -1,0 +1,11 @@
+{
+    "name": "Page Position Saver",
+    "version": "0.1",
+    "manifest_version" : 2,
+    "description": "Save the last position of the scroll.",
+    "browser_action":{},
+    "background" : {
+      "scripts" : ["background.js"]
+    },
+    "permissions": ["activeTab"]
+  }
